@@ -143,14 +143,16 @@ public class ProductoPerecederoData {
      
     }
    
-   public List<ProductoPerecedero> inStock(String tipo) {
+   public List<ProductoPerecedero> inStockTipo(String tipo) {
         List<ProductoPerecedero> productosP = new ArrayList<ProductoPerecedero>();
 
         try {
          String sql = "SELECT * FROM productoperecedero WHERE tipo LIKE ? AND stock > 0;";
             PreparedStatement statement = connection.prepareStatement(sql);
+             statement.setString(1, tipo);
             ResultSet resultSet = statement.executeQuery();
             ProductoPerecedero producto;
+            
             
           while (resultSet.next()) {
                 producto = new ProductoPerecedero();
@@ -170,6 +172,37 @@ public class ProductoPerecederoData {
         }
         return productosP;
 }
+  public List<ProductoPerecedero> inStockMarca(String marca) {
+        List<ProductoPerecedero> productosP = new ArrayList<ProductoPerecedero>();
+
+        try {
+         String sql = "SELECT * FROM productoperecedero WHERE marca LIKE ? AND stock > 0;";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, marca);
+            ResultSet resultSet = statement.executeQuery();
+            ProductoPerecedero producto;
+             
+            
+          while (resultSet.next()) {
+                producto = new ProductoPerecedero();
+                producto.setCodigo(resultSet.getString("codigo"));
+                producto.setMarca(resultSet.getString("marca"));
+                producto.setTipo(resultSet.getString("tipo"));
+                producto.setPrecioCosto(resultSet.getDouble("precioCosto"));
+                producto.setPrecioFinal(resultSet.getDouble("precioFinal"));
+                producto.setStock(resultSet.getInt("stock"));
+                producto.setFechaVencimiento(resultSet.getDate("fechaVencimiento").toLocalDate());
+
+                productosP.add(producto);
+            }
+            statement.close();  
+        } catch (SQLException ex) {
+            System.out.println("Error al mostrar productos: " + ex.getMessage());
+        }
+        return productosP;
+}  
+   
+   
    public boolean isCodigoExistenteP(String codigo) {
        boolean data = false;
         try {

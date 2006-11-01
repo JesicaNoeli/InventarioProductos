@@ -118,9 +118,8 @@ public void leerContraseñas(){
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(500, 700));
 
-        escritorio.setPreferredSize(new java.awt.Dimension(500, 700));
+        escritorio.setPreferredSize(new java.awt.Dimension(600, 700));
 
         fondo.setBackground(new java.awt.Color(153, 153, 153));
         fondo.setPreferredSize(new java.awt.Dimension(400, 500));
@@ -169,31 +168,31 @@ public void leerContraseñas(){
         fondo.setLayout(fondoLayout);
         fondoLayout.setHorizontalGroup(
             fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(fondoLayout.createSequentialGroup()
-                .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(fondoLayout.createSequentialGroup()
-                        .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(fondoLayout.createSequentialGroup()
-                                .addGap(131, 131, 131)
-                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(fondoLayout.createSequentialGroup()
-                                .addGap(120, 120, 120)
-                                .addComponent(jLabel3)))
-                        .addGap(29, 29, 29)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
-                .addGap(0, 109, Short.MAX_VALUE)
+                .addGap(0, 176, Short.MAX_VALUE)
                 .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(137, 137, 137))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 220, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(173, 173, 173))))
+            .addGroup(fondoLayout.createSequentialGroup()
+                .addGap(145, 145, 145)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
+                        .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(151, 151, 151))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                         .addComponent(ingresar)
-                        .addGap(193, 193, 193))
+                        .addGap(229, 229, 229))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                         .addComponent(salir)
-                        .addGap(201, 201, 201))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 287, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(104, 104, 104))))
+                        .addGap(238, 238, 238))))
         );
         fondoLayout.setVerticalGroup(
             fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -204,13 +203,13 @@ public void leerContraseñas(){
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel3)
-                .addGap(16, 16, 16)
+                .addGap(9, 9, 9)
                 .addComponent(contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(ingresar)
-                .addGap(38, 38, 38)
+                .addGap(36, 36, 36)
                 .addComponent(salir)
-                .addContainerGap(239, Short.MAX_VALUE))
+                .addContainerGap(241, Short.MAX_VALUE))
         );
 
         escritorio.setLayer(fondo, javax.swing.JLayeredPane.DEFAULT_LAYER);
@@ -219,7 +218,7 @@ public void leerContraseñas(){
         escritorio.setLayout(escritorioLayout);
         escritorioLayout.setHorizontalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, 500, Short.MAX_VALUE)
+            .addComponent(fondo, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)
         );
         escritorioLayout.setVerticalGroup(
             escritorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

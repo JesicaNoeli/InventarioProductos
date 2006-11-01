@@ -123,14 +123,16 @@ public class ProductoData {
         }
         return productos;
 }
-    public List<Producto> inStock(String tipo) {
+    public List<Producto> inStockTipo(String tipo){
         List<Producto> productos = new ArrayList<Producto>();
 
         try {
          String sql = "SELECT * FROM producto WHERE tipo LIKE ? AND stock > 0;";
             PreparedStatement statement = connection.prepareStatement(sql);
+             statement.setString(1, tipo);
             ResultSet resultSet = statement.executeQuery();
             Producto producto;
+            
             
           while (resultSet.next()) {
                 producto = new Producto();
@@ -150,6 +152,36 @@ public class ProductoData {
         return productos;
 }
    
+     public List<Producto> inStockMarca(String marca){
+        List<Producto> productos = new ArrayList<Producto>();
+
+        try {
+         String sql = "SELECT * FROM producto WHERE marca LIKE ? AND stock > 0;";
+            PreparedStatement statement = connection.prepareStatement(sql);
+            statement.setString(1, marca);
+            ResultSet resultSet = statement.executeQuery();
+            Producto producto;
+             
+            
+          while (resultSet.next()) {
+                producto = new Producto();
+                producto.setCodigo(resultSet.getString("codigo"));
+                producto.setMarca(resultSet.getString("marca"));
+                producto.setTipo(resultSet.getString("tipo"));
+                producto.setPrecioCosto(resultSet.getDouble("precioCosto"));
+                producto.setPrecioFinal(resultSet.getDouble("precioFinal"));
+                producto.setStock(resultSet.getInt("stock"));
+
+                productos.add(producto);
+            }
+            statement.close();  
+        } catch (SQLException ex) {
+            System.out.println("Error al mostrar productos: " + ex.getMessage());
+        }
+        return productos;
+}
+   
+    
     public void borrarProducto(String codigo){
     try {
             
