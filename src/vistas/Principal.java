@@ -360,7 +360,7 @@ public class Principal extends javax.swing.JInternalFrame {
                 .addGap(29, 29, 29))
             .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 595, Short.MAX_VALUE)
             .addGroup(listaLayout.createSequentialGroup()
-                .addGap(262, 262, 262)
+                .addGap(261, 261, 261)
                 .addComponent(salir3)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
@@ -375,9 +375,9 @@ public class Principal extends javax.swing.JInternalFrame {
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(21, 21, 21)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 543, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(salir3)
-                .addGap(32, 32, 32))
+                .addGap(37, 37, 37))
         );
 
         pestañas.addTab("Lista de Productos", lista);
